@@ -68,7 +68,10 @@ jobs:
             exit 1
           fi
           ASSET="offline-protocol-$VERSION-swift-package.tar.gz"
-          if ! gh release view "v$VERSION" -R "$SDK" --json assets -q '.assets[].name' | grep -qxF "$ASSET"; then
+          # Listed, then searched: a grep that stops early under pipefail
+          # would read as "no asset".
+          ASSETS="$(gh release view "v$VERSION" -R "$SDK" --json assets -q '.assets[].name')"
+          if ! grep -qxF "$ASSET" <<<"$ASSETS"; then
             if [ -n "$INPUT_VERSION" ]; then
               echo "::error::release v$VERSION of $SDK has no $ASSET"
               exit 1
@@ -135,7 +138,7 @@ jobs:
           MODE=push
           [ "$DRY_RUN" = true ] && MODE=rehearse
           GITHUB_SHA="$(git -C sdk rev-parse HEAD)" \
-            bash sdk/scripts/publish-swift-package.sh --version "$VERSION" \
+            bash sdk/scripts/publish-swift-package.sh --version "$VERSION" --repository "$SDK" \
               --package "assets/offline-protocol-$VERSION-swift-package.tar.gz" \
               --archive "assets/offline-protocol-$VERSION-swiftpm-xcframework.zip" \
               --remote "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" \
