@@ -1,0 +1,142 @@
+name: Publish
+
+# Tags this repository with each release of the SDK.
+#
+# Nothing pushes here from outside. This pulls the package the SDK's release
+# attached to its GitHub release, verifies the release's attestation on it,
+# and commits and tags it with the token every workflow holds for its own
+# repository, so no credential for this repository exists anywhere. The
+# logic is scripts/publish-swift-package.sh in the SDK, checked out from the
+# tag being published, so it is tested there and copied nowhere.
+#
+# Run by hand after a release:
+#   gh workflow run publish.yml -R Offline-Protocol/offline-protocol-swift -f version=X.Y.Z
+# and every six hours for the newest release, in case nobody did.
+#
+# A tag here never moves. Swift Package Manager records the revision behind
+# every version it resolves, so the script accepts a version that is already
+# tagged only when the tag holds exactly what it would publish, and refuses
+# one that differs. A bad release is answered by the next version.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The SDK release to publish (X.Y.Z, without the v)'
+        required: true
+        type: string
+      dry_run:
+        description: 'Everything but the push'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+env:
+  SDK: Offline-Protocol/offline-protocol-sdk
+
+jobs:
+  publish:
+    name: Publish the Swift package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Choose the release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          if [ -n "$INPUT_VERSION" ]; then
+            VERSION="$INPUT_VERSION"
+          else
+            # The newest release, prereleases included: a release candidate is
+            # a Swift prerelease version too, and a consumer gets it only by
+            # asking for it. A draft is not a release.
+            VERSION="$(gh release list -R "$SDK" --exclude-drafts --limit 1 --json tagName -q '.[0].tagName')"
+            VERSION="${VERSION#v}"
+          fi
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "::error::not a release version: '$VERSION'"
+            exit 1
+          fi
+          ASSET="offline-protocol-$VERSION-swift-package.tar.gz"
+          if ! gh release view "v$VERSION" -R "$SDK" --json assets -q '.assets[].name' | grep -qxF "$ASSET"; then
+            if [ -n "$INPUT_VERSION" ]; then
+              echo "::error::release v$VERSION of $SDK has no $ASSET"
+              exit 1
+            fi
+            echo "v$VERSION has no Swift package (releases before 0.28.0 have none). Nothing to publish."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # On the schedule, a version already here is done. By hand, the
+          # script decides: the same content again is accepted, different
+          # content is refused.
+          if [ -z "$INPUT_VERSION" ] && git ls-remote --exit-code --tags \
+            "https://github.com/${{ github.repository }}.git" "refs/tags/$VERSION" >/dev/null; then
+            echo "$VERSION is already published here."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Publishing $VERSION."
+
+      - name: Download the package and the archive it names
+        if: steps.release.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.release.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh release download "v$VERSION" -R "$SDK" -D assets \
+            -p "offline-protocol-$VERSION-swift-package.tar.gz" \
+            -p "offline-protocol-$VERSION-swiftpm-xcframework.zip"
+          ls -l assets
+
+      # Signed by the SDK's release workflow, which is the identity this
+      # trusts: a file that was replaced on the release page fails here.
+      - name: Verify the release's attestations
+        if: steps.release.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for asset in assets/*; do
+            gh attestation verify "$asset" --repo "$SDK" \
+              --signer-workflow "$SDK/.github/workflows/release.yml"
+          done
+
+      # The script, from the release being published.
+      - name: Check out the publishing script from the release
+        if: steps.release.outputs.skip != 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Offline-Protocol/offline-protocol-sdk
+          ref: v${{ steps.release.outputs.version }}
+          path: sdk
+          sparse-checkout: scripts
+
+      - name: Commit and tag the package
+        if: steps.release.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.release.outputs.version }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          MODE=push
+          [ "$DRY_RUN" = true ] && MODE=rehearse
+          GITHUB_SHA="$(git -C sdk rev-parse HEAD)" \
+            bash sdk/scripts/publish-swift-package.sh --version "$VERSION" \
+              --package "assets/offline-protocol-$VERSION-swift-package.tar.gz" \
+              --archive "assets/offline-protocol-$VERSION-swiftpm-xcframework.zip" \
+              --remote "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" \
+              --mode "$MODE"
