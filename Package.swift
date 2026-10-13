@@ -26,8 +26,8 @@ let package = Package(
         // imports, which is also the directory its headers sit in.
         .binaryTarget(
             name: "offline_protocolFFI",
-            url: "https://github.com/Offline-Protocol/offline-protocol-sdk/releases/download/v0.28.0/offline-protocol-0.28.0-swiftpm-xcframework.zip",
-            checksum: "56f6d0af6c30749c274c9b21a7c6a363f1d7438531daa9f54518a0f0becd0fc4"
+            url: "https://github.com/Offline-Protocol/offline-protocol-sdk/releases/download/v0.29.0/offline-protocol-0.29.0-swiftpm-xcframework.zip",
+            checksum: "f2b85225d771d2b9f3f56ffe81e7d0bcdb6b965b86f3f121d11261e101ddcefa"
         ),
         .target(
             name: "OfflineProtocolSDK",
