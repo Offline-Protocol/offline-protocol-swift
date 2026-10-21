@@ -25,14 +25,13 @@ upstream source on each crate's page) — the exact versions are listed below.
 
 | License | Crates |
 |---------|--------|
-| MIT License | 269 |
+| MIT License | 270 |
 | Mozilla Public License 2.0 | 12 |
 | GNU Affero General Public License v3.0 only | 11 |
-| Apache License 2.0 | 11 |
+| Apache License 2.0 | 10 |
 | BSD 3-Clause "New" or "Revised" License | 6 |
 | ISC License | 3 |
 | Boost Software License 1.0 | 1 |
-| Community Data License Agreement Permissive 2.0 | 1 |
 | Unicode License v3 | 1 |
 
 ## Licenses
@@ -41,17 +40,17 @@ upstream source on each crate's page) — the exact versions are listed below.
 
 Used by:
 
-- [offline-protocol 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-core 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-data 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-mls 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-reliability 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-router 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-sealed 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-services 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-telemetry-wire 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-transport 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-uniffi 0.29.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-core 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-data 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-mls 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-reliability 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-router 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-sealed 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-services 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-telemetry-wire 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-transport 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-uniffi 0.30.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
 
 ```
 GNU AFFERO GENERAL PUBLIC LICENSE
@@ -520,7 +519,6 @@ Used by:
 - [libcrux-secrets 0.0.5](https://github.com/cryspen/libcrux)
 - [libcrux-sha3 0.0.8](https://github.com/cryspen/libcrux)
 - [libcrux-traits 0.0.6](https://github.com/cryspen/libcrux)
-- [ryu 1.0.20](https://github.com/dtolnay/ryu)
 
 ```
 Apache License
@@ -823,79 +821,6 @@ DEALINGS IN THE SOFTWARE.
 
 ---
 
-### Community Data License Agreement Permissive 2.0
-
-Used by:
-
-- [webpki-roots 1.0.9](https://github.com/rustls/webpki-roots)
-
-```
-# Community Data License Agreement - Permissive - Version 2.0
-
-This is the Community Data License Agreement - Permissive, Version
-2.0 (the "agreement"). Data Provider(s) and Data Recipient(s) agree
-as follows:
-
-## 1. Provision of the Data
-
-1.1. A Data Recipient may use, modify, and share the Data made
-available by Data Provider(s) under this agreement if that Data
-Recipient follows the terms of this agreement.
-
-1.2. This agreement does not impose any restriction on a Data
-Recipient's use, modification, or sharing of any portions of the
-Data that are in the public domain or that may be used, modified,
-or shared under any other legal exception or limitation.
-
-## 2. Conditions for Sharing Data
-
-2.1. A Data Recipient may share Data, with or without modifications, so
-long as the Data Recipient makes available the text of this agreement
-with the shared Data.
-
-## 3. No Restrictions on Results
-
-3.1. This agreement does not impose any restriction or obligations
-with respect to the use, modification, or sharing of Results.
-
-## 4. No Warranty; Limitation of Liability
-
-4.1. All Data Recipients receive the Data subject to the following
-terms:
-
-THE DATA IS PROVIDED ON AN "AS IS" BASIS, WITHOUT REPRESENTATIONS,
-WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED
-INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE,
-NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
-
-NO DATA PROVIDER SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING
-WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE DATA OR RESULTS,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-
-## 5. Definitions
-
-5.1. "Data" means the material received by a Data Recipient under
-this agreement.
-
-5.2. "Data Provider" means any person who is the source of Data
-provided under this agreement and in reliance on a Data Recipient's
-agreement to its terms.
-
-5.3. "Data Recipient" means any person who receives Data directly
-or indirectly from a Data Provider and agrees to the terms of this
-agreement.
-
-5.4. "Results" means any outcome obtained by computational analysis
-of Data, including for example machine learning models and models'
-insights.
-
-```
-
----
-
 ### ISC License
 
 Used by:
@@ -950,7 +875,7 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 Used by:
 
-- [rustls-webpki 0.103.15](https://github.com/rustls/webpki)
+- [rustls-webpki 0.103.16](https://github.com/rustls/webpki)
 
 ```
 Except as otherwise noted, this project is licensed under the following
@@ -1768,7 +1693,7 @@ DEALINGS IN THE SOFTWARE.
 
 Used by:
 
-- [rustls 0.23.45](https://github.com/rustls/rustls)
+- [rustls 0.23.46](https://github.com/rustls/rustls)
 
 ```
 Copyright (c) 2016 Joseph Birr-Pixton <jpixton@gmail.com>
@@ -2133,7 +2058,7 @@ DEALINGS IN THE SOFTWARE.
 
 Used by:
 
-- [bech32 0.11.1](https://github.com/rust-bitcoin/rust-bech32)
+- [bech32 0.12.0](https://github.com/rust-bitcoin/rust-bech32)
 
 ```
 Copyright (c) 2017 Clark Moody
@@ -3026,6 +2951,43 @@ DEALINGS IN THE SOFTWARE.
 
 Used by:
 
+- [zeroize 1.9.0](https://github.com/RustCrypto/utils)
+
+```
+Copyright (c) 2018-2026 The RustCrypto Project Developers
+
+Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without
+limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice
+shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+```
+
+---
+
+### MIT License
+
+Used by:
+
 - [postcard 1.1.3](https://github.com/jamesmunns/postcard)
 
 ```
@@ -3468,6 +3430,43 @@ Used by:
 
 ```
 Copyright (c) 2019-2023 The RustCrypto Project Developers
+
+Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without
+limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice
+shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+```
+
+---
+
+### MIT License
+
+Used by:
+
+- [zeroize_derive 1.5.0](https://github.com/RustCrypto/utils)
+
+```
+Copyright (c) 2019-2026 The RustCrypto Project Developers
 
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
@@ -4516,39 +4515,6 @@ SOFTWARE.
 
 Used by:
 
-- [zeroize 1.8.2](https://github.com/RustCrypto/utils)
-
-```
-MIT License
-
-Copyright (c) 2018-2021 The RustCrypto Project Developers
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-```
-
----
-
-### MIT License
-
-Used by:
-
 - [dashmap 5.5.3](https://github.com/xacrimon/dashmap)
 
 ```
@@ -4695,39 +4661,6 @@ Used by:
 MIT License
 
 Copyright (c) 2019-2020 CreepySkeleton
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-```
-
----
-
-### MIT License
-
-Used by:
-
-- [zeroize_derive 1.4.2](https://github.com/RustCrypto/utils/tree/master/zeroize/derive)
-
-```
-MIT License
-
-Copyright (c) 2019-2023 The RustCrypto Project Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -4933,7 +4866,6 @@ Used by:
 - [r-efi 5.3.0](https://github.com/r-efi/r-efi)
 - [serde_columnar 0.3.14](https://github.com/loro-dev/columnar)
 - [serde_columnar_derive 0.3.7](https://crates.io/crates/serde_columnar_derive)
-- [siphasher 0.3.11](https://github.com/jedisct1/rust-siphash)
 - [wasip2 1.0.1+wasi-0.2.4](https://github.com/bytecodealliance/wasi-rs)
 - [windows-core 0.62.2](https://github.com/microsoft/windows-rs)
 - [windows-implement 0.60.2](https://github.com/microsoft/windows-rs)
@@ -5148,8 +5080,8 @@ Used by:
 
 - [anyhow 1.0.100](https://github.com/dtolnay/anyhow)
 - [camino 1.2.1](https://github.com/camino-rs/camino)
-- [cargo-platform 0.1.9](https://github.com/rust-lang/cargo)
-- [cargo_metadata 0.19.2](https://github.com/oli-obk/cargo_metadata)
+- [cargo-platform 0.3.3](https://github.com/rust-lang/cargo)
+- [cargo_metadata 0.23.1](https://github.com/oli-obk/cargo_metadata)
 - [curve25519-dalek-derive 0.1.1](https://github.com/dalek-cryptography/curve25519-dalek)
 - [fastrand 2.3.0](https://github.com/smol-rs/fastrand)
 - [group 0.13.0](https://github.com/zkcrypto/group)
@@ -5170,7 +5102,7 @@ Used by:
 - [serde_bytes 0.11.19](https://github.com/serde-rs/bytes)
 - [serde_core 1.0.229](https://github.com/serde-rs/serde)
 - [serde_derive 1.0.229](https://github.com/serde-rs/serde)
-- [serde_json 1.0.145](https://github.com/serde-rs/json)
+- [serde_json 1.0.151](https://github.com/serde-rs/json)
 - [syn 1.0.109](https://github.com/dtolnay/syn)
 - [syn 2.0.108](https://github.com/dtolnay/syn)
 - [syn 3.0.3](https://github.com/dtolnay/syn)
@@ -5182,6 +5114,7 @@ Used by:
 - [utf8-zero 0.8.1](https://github.com/algesten/utf8-zero)
 - [wasi 0.11.1+wasi-snapshot-preview1](https://github.com/bytecodealliance/wasi)
 - [wit-bindgen 0.46.0](https://github.com/bytecodealliance/wit-bindgen)
+- [zmij 1.0.23](https://github.com/dtolnay/zmij)
 
 ```
 Permission is hereby granted, free of charge, to any
@@ -5216,7 +5149,7 @@ DEALINGS IN THE SOFTWARE.
 
 Used by:
 
-- [fs-err 2.11.0](https://github.com/andrewhickman/fs-err)
+- [fs-err 3.3.2](https://github.com/andrewhickman/fs-err)
 
 ```
 Permission is hereby granted, free of charge, to any
@@ -5272,6 +5205,35 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
+
+---
+
+### MIT License
+
+Used by:
+
+- [siphasher 1.0.4](https://github.com/jedisct1/rust-siphash)
+
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ```
 
@@ -6206,12 +6168,12 @@ Used by:
 - [hpke-rs-crypto 0.6.1](https://github.com/cryspen/hpke-rs)
 - [hpke-rs-rust-crypto 0.6.1](https://github.com/cryspen/hpke-rs)
 - [hpke-rs 0.6.1](https://github.com/cryspen/hpke-rs)
-- [uniffi 0.30.0](https://github.com/mozilla/uniffi-rs)
-- [uniffi_core 0.30.0](https://github.com/mozilla/uniffi-rs)
-- [uniffi_internal_macros 0.30.0](https://github.com/mozilla/uniffi-rs)
-- [uniffi_macros 0.30.0](https://github.com/mozilla/uniffi-rs)
-- [uniffi_meta 0.30.0](https://github.com/mozilla/uniffi-rs)
-- [uniffi_pipeline 0.30.0](https://github.com/mozilla/uniffi-rs)
+- [uniffi 0.32.2](https://github.com/mozilla/uniffi-rs)
+- [uniffi_core 0.32.2](https://github.com/mozilla/uniffi-rs)
+- [uniffi_internal_macros 0.32.2](https://github.com/mozilla/uniffi-rs)
+- [uniffi_macros 0.32.2](https://github.com/mozilla/uniffi-rs)
+- [uniffi_meta 0.32.2](https://github.com/mozilla/uniffi-rs)
+- [uniffi_pipeline 0.32.2](https://github.com/mozilla/uniffi-rs)
 
 ```
 Mozilla Public License Version 2.0

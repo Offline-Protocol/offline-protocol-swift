@@ -13,7 +13,7 @@ In Xcode, add the package by URL and pick a version. In a manifest:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Offline-Protocol/offline-protocol-swift.git", from: "0.29.0")
+    .package(url: "https://github.com/Offline-Protocol/offline-protocol-swift.git", from: "0.30.0")
 ],
 targets: [
     .target(name: "YourApp", dependencies: [
