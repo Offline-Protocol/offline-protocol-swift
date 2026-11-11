@@ -40,17 +40,17 @@ upstream source on each crate's page) — the exact versions are listed below.
 
 Used by:
 
-- [offline-protocol 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-core 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-data 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-mls 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-reliability 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-router 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-sealed 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-services 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-telemetry-wire 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-transport 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
-- [offline-protocol-uniffi 0.32.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-core 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-data 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-mls 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-reliability 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-router 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-sealed 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-services 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-telemetry-wire 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-transport 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
+- [offline-protocol-uniffi 0.33.0](https://github.com/Offline-Protocol/offline-protocol-sdk)
 
 ```
 GNU AFFERO GENERAL PUBLIC LICENSE
@@ -5479,7 +5479,7 @@ Used by:
 - [pin-project-lite 0.2.16](https://github.com/taiki-e/pin-project-lite)
 - [proc-macro2 1.0.103](https://github.com/dtolnay/proc-macro2)
 - [quote 1.0.41](https://github.com/dtolnay/quote)
-- [rustix 1.1.5](https://github.com/bytecodealliance/rustix)
+- [rustix 1.1.6](https://github.com/bytecodealliance/rustix)
 - [semver 1.0.27](https://github.com/dtolnay/semver)
 - [serde 1.0.229](https://github.com/serde-rs/serde)
 - [serde_bytes 0.11.19](https://github.com/serde-rs/bytes)
